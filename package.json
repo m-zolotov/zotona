@@ -1,0 +1,22 @@
+{
+  "name": "zotona",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/m-zolotov/zotona",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "author": "Zolotov Mikhail"
+}
