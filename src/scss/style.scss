@@ -1,3 +1,22 @@
+@import "variables";
+@import "mixins";
+@import "animations";
+
+@include reset();
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  @include container();
+  .row {
+    @include row-flex();
+    .col {
+      @include col();
+      @include col-sm-6();
+      @include col-md-6();
+      @include col-lg-6();
+    }
+  }
 }
