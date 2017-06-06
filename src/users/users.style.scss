@@ -1,0 +1,97 @@
+@import "../grid/grid.style.scss";
+
+// Variables
+
+// Font
+$font-stack: -apple-system, system-ui,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Colors
+$white: #fff;
+$black: #000;
+$red: #d9534f;
+$orange: #f0ad4e;
+$yellow: #ffd500;
+$green: #5cb85c;
+$blue: #0275d8;
+$teal: #5bc0de;
+$pink: #ff5b77;
+$purple: #613d7c;
+
+$gray-dark: #292b2c;
+$gray: #464a4c;
+$gray-light: #636c72;
+$gray-lighter: #eceeef;
+$gray-lightest: #f7f7f9;
+
+// Mixins
+// Animations
+// Users style
+
+// @include reset();
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+}
+
+.container {
+  @include container();
+  .row {
+    @include row-flex();
+    .form-authorization {
+      @include col-lg-6();
+      @include offset-lg(3);
+      @include col-md-6();
+      @include offset-md(3);
+      @include col-sm-8();
+      @include offset-sm(2);
+      @include col-xs-8();
+      @include offset-xs(2);
+      @include col();
+    }
+  }
+}
+
+.form-authorization {
+  &__element {
+    margin-bottom: 1rem;
+  }
+  &__label {
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    margin-bottom: .25rem;
+    color: $gray;
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: $white;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s;
+  }
+  &__hint {
+    &--text-muted {
+      color: $gray-light;
+    }
+  }
+  &__btn {
+    &---outline-primary {
+      color: $blue;
+      background-image: none;
+      background-color: transparent;
+      border-color: $blue;
+    }
+  }
+}
