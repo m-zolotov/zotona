@@ -88,10 +88,5 @@ body {
   transition: border-color ease-in-out .15s; }
 .form-authorization__hint--text-muted {
   color: #636c72; }
-.form-authorization__btn---outline-primary {
-  color: #0275d8;
-  background-image: none;
-  background-color: transparent;
-  border-color: #0275d8; }
 
 /*# sourceMappingURL=users.style.css.map */
