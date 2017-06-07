@@ -1,12 +1,13 @@
 .orders-list-table {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 1rem;
+  margin: 3rem auto 1rem;
   border-collapse: collapse;
   background-color: transparent; }
   .orders-list-table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #eceeef; }
+    border-bottom: 2px solid #eceeef;
+    text-align: left; }
   .orders-list-table td,
   .orders-list-table th {
     padding: .75rem;

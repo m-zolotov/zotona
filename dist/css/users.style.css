@@ -63,7 +63,7 @@ body {
 
 .form-authorization {
   max-width: 500px;
-  margin: 50px auto; }
+  margin: 3rem auto 1rem; }
   .form-authorization__element {
     margin-bottom: 1rem; }
   .form-authorization__label {
