@@ -1,3 +1,18 @@
-
+.orders-list-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  border-collapse: collapse;
+  background-color: transparent; }
+  .orders-list-table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eceeef; }
+  .orders-list-table td,
+  .orders-list-table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #eceeef; }
+  .orders-list-table--hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075); }
 
 /*# sourceMappingURL=orders-list.style.css.map */

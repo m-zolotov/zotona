@@ -10,19 +10,11 @@
 
 // @include reset();
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: $font-stack;
-}
 
 .container {
   @include container();
-  .row {
+  /*.row {
     @include row-flex();
     .form-authorization {
       @include col-lg-6();
@@ -35,10 +27,12 @@ body {
       @include offset-xs(2);
       @include col();
     }
-  }
+  }*/
 }
 
 .form-authorization {
+  max-width: 500px;
+  margin: 50px auto;
   &__element {
     margin-bottom: 1rem;
   }

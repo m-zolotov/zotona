@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'Users']);
+angular.module('myApp', ['ngRoute', 'Users', 'Orders']);
 
 angular.module('myApp')
     .config( ['$routeProvider', function($routeProvider) {

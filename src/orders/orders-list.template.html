@@ -1,1 +1,24 @@
-<p>Orders list template</p>
+<h4 ng-bind="$ctrl.title"></h4>
+
+<table class="orders-list-table orders-list-table--hover">
+    <thead>
+        <tr>
+            <th class="">Number</th>
+            <th class="">Status</th>
+            <th class="">Date</th>
+            <th class="">Address</th>
+            <th class="">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="order in $ctrl.orders">
+            <td>
+                <a href="#!/orders/{{order.id}}" ng-bind="order.guid"></a>
+            </td>
+            <td class="" ng-bind="order.status"></td>
+            <td class="" ng-bind="order.date"></td>
+            <td class="" ng-bind="order.address"></td>
+            <td class="" ng-bind="order.price"></td>
+        </tr>
+    </tbody>
+</table>
