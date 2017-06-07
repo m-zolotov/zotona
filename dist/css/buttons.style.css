@@ -9,98 +9,27 @@
   border: 1px solid transparent;
   padding: .5rem 1rem;
   font-size: 1rem;
-  border-radius: .25rem;
-  transition: all .2s ease-in-out; }
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out; }
+  .btn.disabled, .btn:disabled {
+    opacity: .65; }
   .btn--outline-primary {
+    background-image: none;
+    background-color: transparent;
     color: #0275d8;
-    background-image: none;
-    background-color: transparent;
     border-color: #0275d8; }
+    .btn--outline-primary:focus, .btn--outline-primary:active, .btn--outline-primary:hover {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8; }
   .btn--outline-secondary {
-    color: #636c72;
     background-image: none;
     background-color: transparent;
+    color: #636c72;
     border-color: #636c72; }
-
-/*
-.btn {
-  display: inline-block;
-  border: $input-btn-border-width solid transparent;
-  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
-  @include transition($btn-transition);
-
-  // Share hover and focus styles
-  @include hover-focus {
-    text-decoration: none;
-  }
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: $btn-focus-box-shadow;
-  }
-
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    opacity: .65;
-    @include box-shadow(none);
-  }
-
-  &:active,
-  &.active {
-    background-image: none;
-    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-  }
-}
-
-// Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset[disabled] a.btn {
-  pointer-events: none;
-}
-
-
-//
-// Alternate buttons
-//
-
-.btn-primary {
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border-color);
-}
-.btn-secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border-color);
-}
-.btn-info {
-  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border-color);
-}
-.btn-success {
-  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border-color);
-}
-.btn-warning {
-  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border-color);
-}
-.btn-danger {
-  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color);
-}
-
-// Remove all backgrounds
-.btn-outline-primary {
-  @include button-outline-variant($btn-primary-bg, $btn-primary-color);
-}
-.btn-outline-secondary {
-  @include button-outline-variant($btn-secondary-border-color, $btn-secondary-color);
-}
-.btn-outline-info {
-  @include button-outline-variant($btn-info-bg, $btn-info-color);
-}
-.btn-outline-success {
-  @include button-outline-variant($btn-success-bg, $btn-success-color);
-}
-.btn-outline-warning {
-  @include button-outline-variant($btn-warning-bg, $btn-warning-color);
-}
-.btn-outline-danger {
-  @include button-outline-variant($btn-danger-bg, $btn-danger-color);
-}*/
+    .btn--outline-secondary:focus, .btn--outline-secondary:active, .btn--outline-secondary:hover {
+      color: #fff;
+      background-color: #636c72;
+      border-color: #636c72; }
 
 /*# sourceMappingURL=buttons.style.css.map */
