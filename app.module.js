@@ -11,7 +11,7 @@ angular.module('myApp')
             .when('/orders/list', {
                 template: '<orders-list></orders-list>'
             })
-            .when('/orders/:orderId', {
+            .when('/orders/:orderID', {
                 template: '<orders-details></orders-details>'
             })
             .otherwise({

@@ -21,6 +21,24 @@ angular.module('Orders')
                 }
 
                 return deferred.promise;
+            },
+            getOrder: function(orderID){
+                var deferred = $q.defer();
+                var orderDetail = undefined;
+                this.getData().
+                then(function success(orders) {
+                    for (var i = 0; i < ordersList.length; i++) {
+                        if (ordersList[i].id === orderID) {
+                            orderDetail = ordersList[i];
+                            deferred.resolve(JSON.parse(JSON.stringify(orderDetail)));
+                            break;
+                        }
+                    }
+                },function error(orders) {
+                    deferred.reject(orders.status);
+                });
+
+                return deferred.promise;
             }
         }
     });

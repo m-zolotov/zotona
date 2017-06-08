@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('Orders')
-    .component('ordersDetail', {
+    .component('ordersDetails', {
         templateUrl: 'src/orders/orders-details.template.html',
-        controller: ['orderService', '$http', '$q', '$routeParams', function(orderService, $http, $q, $routeParams) {
+        controller: ['ordersService', '$http', '$q', '$routeParams', function(ordersService, $http, $q, $routeParams) {
             var self = this;
-
+            var orderID = $routeParams.orderID;
+            ordersService.getOrder(orderID).then(function(value) {
+                self.order = value;
+            });
         }]
     });
