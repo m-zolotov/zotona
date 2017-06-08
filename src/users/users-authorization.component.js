@@ -5,6 +5,8 @@ angular.module('Users')
         templateUrl: 'src/users/users-authorization.template.html',
         controller: ['userService', '$http', '$q', '$routeParams', '$location', function(userService, $http, $q, $routeParams, $location) {
             var self = this;
-            self.plus = 2*2;
+            userService.getUser().then(function(value) {
+                self.user = value;
+            });
         }]
     });

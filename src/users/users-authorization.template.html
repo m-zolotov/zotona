@@ -8,5 +8,7 @@
         <label for="password" class="form-authorization__label">Password</label>
         <input type="password" class="form-authorization__input" id="password" placeholder="Введите свой пароль" required aria-required="true">
     </div>
-    <button type="submit" class="btn btn--outline-primary form-authorization__btn">Submit</button>
+    <button type="submit" class="btn btn--outline-primary form-authorization__btn" ng-click="$ctrl.editUser()">Submit</button>
+    <p ng-bind="$ctrl.user.login"></p>
+    <p ng-bind="$ctrl.user.password"></p>
 </form>

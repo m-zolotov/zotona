@@ -1,0 +1,12 @@
+[
+  {
+    "error": false,
+    "message": "Пароль верный",
+    "data": "Ok"
+  },
+  {
+    "error": true,
+    "message": "Пароль неверный",
+    "data": null
+  }
+]
