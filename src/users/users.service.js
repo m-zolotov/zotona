@@ -13,10 +13,15 @@ angular.module('Users')
                     then (function success(response) {
                         var answers = response.data;
                         for (var i = 0; i < answers.length; i++) {
+                            console.log('answers[i].login', answers[i].login);
+                            console.log('inputFormValues.login', inputFormValues.login);
                             if (answers[i].login === inputFormValues.login) {
                                 user = answers[i];
                                 deferred.resolve(JSON.parse(JSON.stringify(user)));
                                 break;
+                            } else {
+                                user = {};
+                                deferred.resolve(JSON.parse(JSON.stringify(user)));
                             }
                         }
                         deferred.resolve(JSON.parse(JSON.stringify(user)));
