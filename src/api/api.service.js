@@ -18,32 +18,23 @@ angular.module('API')
             },
             setLogin: function (user) {
                 var deferred = $q.defer();
-                localStorage.setItem('username', String(user.username));
-                localStorage.setItem('password', String(user.password));
                 this.getUser().
-                then(function success(userData) {
-                    if (user.username === userData.username && user.password === userData.password) {
+                then(function success(localUser) {
+                    if (user[0].username === localUser.username && user[0].password === localUser.password) {
                         $location.path('/orders/list');
-
-                    }/* else {
+                        deferred.resolve(JSON.parse(JSON.stringify(localUser)));
+                    } else {
                         $location.path('/authorization');
-                    }*/
-
-
-                        /*if (usersList[i].id === userID) {
-                            userDetail = usersList[i];
-                            deferred.resolve(JSON.parse(JSON.stringify(userDetail)));
-                            break;
-                        }*/
-
+                        deferred.resolve(JSON.parse(JSON.stringify(localUser)));
+                    }
                 },function error(user) {
                     deferred.reject(user.status);
                 });
 
                 return deferred.promise;
-            },
+            }/*,
             setLogout: function () {
 
-            }
+            }*/
         }
     });
