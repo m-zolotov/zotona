@@ -2,18 +2,19 @@
 
 angular.module('API')
     .factory('apiService', function($http, $q){
-        var self = this;
-        self.user = {};
-        self.login = localStorage.getItem('login');
-        self.password = localStorage.getItem('password');
         return{
             getUser: function(){
                 var deferred = $q.defer();
-                if (self.login === null || self.password === null) {
-                    return false;
+                var user = {};
+                user.username = localStorage.getItem('username') || '';
+                user.password = localStorage.getItem('password') || '';
+                if (user.username !== '' || user.password !== '') {
+                    deferred.resolve(JSON.parse(JSON.stringify(user)));
                 } else {
-                    return true;
+                    deferred.resolve(user);
                 }
+
+                return deferred.promise;
             },
             setLogin: function () {
 

@@ -1,7 +1,7 @@
 <form action="" class="form-authorization">
     <div class="form-authorization__element">
-        <label for="login" class="form-authorization__label">Email address</label>
-        <input type="text" class="form-authorization__input" id="login" value="{{$ctrl.user.login}}" ng-model="$ctrl.user.login" aria-describedby="emailHelp" placeholder="Введите свой логин или email" required aria-required="true">
+        <label for="username" class="form-authorization__label">Email address</label>
+        <input type="text" class="form-authorization__input" id="username" value="{{$ctrl.user.username}}" ng-model="$ctrl.user.username" aria-describedby="emailHelp" placeholder="Введите свой логин или email" required aria-required="true">
         <small id="emailHelp" class="form-authorization__hint form-authorization__hint--text-muted">Email или логин</small>
     </div>
     <div class="form-authorization__element">
@@ -9,6 +9,6 @@
         <input type="password" class="form-authorization__input" id="password" value="{{$ctrl.user.password}}" ng-model="$ctrl.user.password" placeholder="Введите свой пароль" required aria-required="true">
     </div>
     <button type="submit" class="btn btn--outline-primary form-authorization__btn" ng-click="$ctrl.setUser($ctrl.user)">Submit</button>
-    <p ng-bind="$ctrl.user.login"></p>
+    <p ng-bind="$ctrl.user.username"></p>
     <p ng-bind="$ctrl.user.password"></p>
 </form>
