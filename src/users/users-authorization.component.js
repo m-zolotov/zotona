@@ -11,7 +11,6 @@ angular.module('Users')
             self.user.password = "";
             self.setUser = function (userData) {
                 //console.log('userData', userData);
-                debugger;
                 userService.getUser(userData).then(function(value) {
                     self.user = value;
                     //localStorage.setItem('username', String(self.user.username));
