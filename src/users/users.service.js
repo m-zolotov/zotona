@@ -4,7 +4,7 @@ angular.module('Users')
     .factory('userService', function($http, $q){
         var user = undefined;
         return{
-            getUser: function(inputFormValues){
+            getUser: function(userData){
                 var deferred = $q.defer();
                 if (user === undefined) {
                     $http({
@@ -13,12 +13,12 @@ angular.module('Users')
                     then (function success(response) {
                         var answers = response.data;
                         for (var i = 0; i < answers.length; i++) {
-                            if (answers[i].login === inputFormValues.login) {
+                            if (answers[i].username === userData.username) {
                                 user = answers[i];
                                 deferred.resolve(JSON.parse(JSON.stringify(user)));
                                 break;
                             } else {
-                                user = {};
+                                user = userData;
                                 deferred.resolve(JSON.parse(JSON.stringify(user)));
                             }
                         }
