@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('API')
-    .factory('apiService', function($http, $q){
+    .factory('apiService', function($http, $q, $location){
         return{
             getUser: function(){
                 var deferred = $q.defer();
@@ -16,8 +16,31 @@ angular.module('API')
 
                 return deferred.promise;
             },
-            setLogin: function () {
+            setLogin: function (user) {
+                var deferred = $q.defer();
+                localStorage.setItem('username', String(user.username));
+                localStorage.setItem('password', String(user.password));
+                this.getUser().
+                then(function success(userData) {
+                    if (user.username === userData.username && user.password === userData.password) {
+                        $location.path('/orders/list');
 
+                    }/* else {
+                        $location.path('/authorization');
+                    }*/
+
+
+                        /*if (usersList[i].id === userID) {
+                            userDetail = usersList[i];
+                            deferred.resolve(JSON.parse(JSON.stringify(userDetail)));
+                            break;
+                        }*/
+
+                },function error(user) {
+                    deferred.reject(user.status);
+                });
+
+                return deferred.promise;
             },
             setLogout: function () {
 
