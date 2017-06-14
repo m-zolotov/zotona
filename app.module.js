@@ -8,12 +8,6 @@ angular.module('myApp')
             .when('/login', {
                 template: '<api-login></api-login>'
             })
-            /*.when('/api/user', {
-                template: '<api-user></api-user>'
-            })
-            .when('/authorization', {
-                template: '<users-authorization></users-authorization>'
-            })*/
             .when('/orders/list', {
                 template: '<orders-list></orders-list>'
             })

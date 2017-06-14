@@ -10,8 +10,6 @@ angular.module('API')
                     if (user.username === 'true' && user.password === 'true') {
                         $location.path('/orders/list');
 
-                    } else {
-                        $location.path('/authorization');
                     }
                 });
             })();
