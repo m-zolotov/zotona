@@ -23,18 +23,12 @@ angular.module('API')
                     if (user[0].username === localUser.username && user[0].password === localUser.password) {
                         $location.path('/orders/list');
                         deferred.resolve(JSON.parse(JSON.stringify(localUser)));
-                    } else {
-                        $location.path('/authorization');
-                        deferred.resolve(JSON.parse(JSON.stringify(localUser)));
                     }
                 },function error(user) {
                     deferred.reject(user.status);
                 });
 
                 return deferred.promise;
-            }/*,
-            setLogout: function () {
-
-            }*/
+            }
         }
     });

@@ -1,33 +1,10 @@
-@import "../grid/grid.style";
-@import "../colors/colors";
-@import "../typography/typography";
-
-// Variables
-
-// Mixins
-// Animations
-// Users style
-
-// @include reset();
-
-
+@import "../scss/_grid";
+@import "../scss/_colors";
+@import "../scss/_typography";
+@import "../scss/_buttons";
 
 .container {
   @include container();
-  /*.row {
-    @include row-flex();
-    .form-authorization {
-      @include col-lg-6();
-      @include offset-lg(3);
-      @include col-md-6();
-      @include offset-md(3);
-      @include col-sm-8();
-      @include offset-sm(2);
-      @include col-xs-8();
-      @include offset-xs(2);
-      @include col();
-    }
-  }*/
 }
 
 .form-authorization {
@@ -62,6 +39,6 @@
     }
   }
   &__btn {
-
+    @include btn-outline-primary();
   }
 }

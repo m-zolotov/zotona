@@ -1,4 +1,4 @@
-@import "../colors/colors";
+@import "colors";
 
 $btn-border-width: 1px;
 $btn-transition: all .2s ease-in-out;
@@ -25,7 +25,7 @@ $color: $white; // default color
   }
 }
 
-.btn {
+@mixin btn() {
   display: inline-block;
   font-weight: 400;
   line-height: 1.25;
@@ -42,14 +42,18 @@ $color: $white; // default color
   &:disabled {
     opacity: .65;
   }
-  &--outline-primary {
-    @include button-outline ();
-    @include button-bg ($blue);
-    @include button-hover ($blue);
-  }
-  &--outline-secondary {
-    @include button-outline ();
-    @include button-bg ($gray-light);
-    @include button-hover ($gray-light);
-  }
+}
+
+@mixin btn-outline-primary() {
+  @include btn ();
+  @include button-outline ();
+  @include button-bg ($blue);
+  @include button-hover ($blue);
+}
+
+@mixin btn-outline-secondary() {
+  @include btn ();
+  @include button-outline ();
+  @include button-bg ($gray-light);
+  @include button-hover ($gray-light);
 }
