@@ -1,10 +1,13 @@
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'API', 'Users', 'Orders']);
+angular.module('app', ['ngRoute', 'Home', 'API', 'User', 'Order']);
 
-angular.module('myApp')
+angular.module('app')
     .config( ['$routeProvider', function($routeProvider) {
         $routeProvider
+            .when('/', {
+                template: '<home></home>'
+            })
             .when('/login', {
                 template: '<api-login></api-login>'
             })
@@ -12,9 +15,9 @@ angular.module('myApp')
                 template: '<orders-list></orders-list>'
             })
             .when('/orders/:orderID', {
-                template: '<orders-details></orders-details>'
+                template: '<order-details></order-details>'
             })
             .otherwise({
-                redirectTo: '/login'
+                redirectTo: '/'
             });
     }]);

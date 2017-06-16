@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('Orders')
-    .factory('ordersService', function($http, $q){
+angular.module('Order')
+    .factory('orderService', function($http, $q){
         var ordersList = undefined;
         return{
-            getData: function(){
+            getList: function(){
                 var deferred = $q.defer();
-                if (ordersList === undefined) {
+                if (!ordersList) {
                     $http({
                         method: 'GET', url: './src/data/orders.json'
                     }).
@@ -19,14 +19,13 @@ angular.module('Orders')
                 } else {
                     deferred.resolve(ordersList);
                 }
-
                 return deferred.promise;
             },
             getOrder: function(orderID){
                 var deferred = $q.defer();
                 var orderDetail = undefined;
-                this.getData().
-                then(function success(orders) {
+                this.getList().
+                then(function success() {
                     for (var i = 0; i < ordersList.length; i++) {
                         if (ordersList[i].id === orderID) {
                             orderDetail = ordersList[i];

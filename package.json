@@ -4,11 +4,15 @@
   "version": "0.0.1",
   "main": "index.js",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/m-zolotov/zotona",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-zolotov/zotona.git"
+  },
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
     "angular-route": "^1.6.4",
+    "angular-cookies": "^1.6.4",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "normalize.css": "^7.0.0"
@@ -29,5 +33,9 @@
     "preprotractor": "npm run update-webdriver",
     "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
   },
-  "author": "Zolotov Mikhail"
+  "author": "Zolotov Mikhail",
+  "bugs": {
+    "url": "https://github.com/m-zolotov/zotona/issues"
+  },
+  "homepage": "https://github.com/m-zolotov/zotona#readme"
 }

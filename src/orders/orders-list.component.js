@@ -1,11 +1,18 @@
 'use strict';
 
-angular.module('Orders')
+angular.module('Order')
     .component('ordersList', {
         templateUrl: 'src/orders/orders-list.template.html',
-        controller: ['ordersService', '$http', '$q', '$routeParams', function(ordersService, $http, $q, $routeParams) {
+        controller: ['orderService', 'apiService', function(orderService, apiService) {
             var self = this;
-            ordersService.getData().then(function(value) {
+
+            apiService.getCurrentUser();
+
+            apiService.getUser().then(function(value) {
+                self.user = value;
+            });
+
+            orderService.getList().then(function(value) {
                 self.orders = value;
             });
         }]
