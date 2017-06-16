@@ -15,5 +15,9 @@ angular.module('Order')
             orderService.getList().then(function(value) {
                 self.orders = value;
             });
+
+            self.getOut = function () {
+                apiService.getOutOfAccount();
+            };
         }]
     });

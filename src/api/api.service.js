@@ -25,13 +25,14 @@ angular.module('API')
                 return deferred.promise;
             },
             getCurrentUser: function(){
-                //localStorage.setItem('username', 'login');
-                var currentUser = localStorage.getItem('username');
+                var deferred = $q.defer();
+                var currentUser = sessionStorage.getItem('username');
                 if (!currentUser) {
                     $location.path('/login');
                 }
+                return deferred.promise;
             },
-            setLogin: function (user) {
+            setAuthorizedUser: function (user) {
                 var deferred = $q.defer();
                 this.getUser().
                 then(function success(dataUser) {
@@ -44,6 +45,12 @@ angular.module('API')
                 },function error(user) {
                     deferred.reject(user.status);
                 });
+                return deferred.promise;
+            },
+            getOutOfAccount: function () {
+                var deferred = $q.defer();
+                sessionStorage.clear();
+                this.getCurrentUser();
                 return deferred.promise;
             }
         }

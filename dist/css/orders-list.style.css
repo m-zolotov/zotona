@@ -1,6 +1,32 @@
+*,
+::after,
+::before {
+  box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit; }
+
+.h1, h1 {
+  font-size: 2.5rem; }
+
+.h2, h2 {
+  font-size: 2rem; }
+
+.h3, h3 {
+  font-size: 1.75rem; }
+
+.h4, h4 {
+  font-size: 1.5rem; }
+
 .orders-list-table {
   width: 100%;
-  max-width: 800px;
   margin: 3rem auto 1rem;
   border-collapse: collapse;
   background-color: transparent; }
@@ -15,5 +41,30 @@
     border-top: 1px solid #eceeef; }
   .orders-list-table--hover tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.075); }
+.orders-list__btn-block {
+  text-align: center; }
+.orders-list__btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  background-image: none;
+  background-color: transparent;
+  color: #636c72;
+  border-color: #636c72; }
+  .orders-list__btn.disabled, .orders-list__btn:disabled {
+    opacity: .65; }
+  .orders-list__btn:focus, .orders-list__btn:active, .orders-list__btn:hover {
+    color: #fff;
+    background-color: #636c72;
+    border-color: #636c72; }
 
 /*# sourceMappingURL=orders-list.style.css.map */

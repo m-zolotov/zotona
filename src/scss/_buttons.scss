@@ -44,6 +44,10 @@ $color: $white; // default color
   }
 }
 
+@mixin btn-group() {
+
+}
+
 @mixin btn-outline-primary() {
   @include btn ();
   @include button-outline ();

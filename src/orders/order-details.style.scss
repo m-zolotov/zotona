@@ -1,0 +1,9 @@
+@import "../scss/_grid";
+@import "../scss/_colors";
+@import "../scss/_buttons";
+
+.orders-details {
+  &__btn {
+    @include btn-outline-primary();
+  }
+}

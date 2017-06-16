@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKE,oBAAO;ECuBP,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,qBAAmC;EAC3C,OAAO,EAAE,UAAU;EACnB,SAAS,EAAE,IAAI;EACf,aAAa,EAlCF,OAAM;EAmCjB,UAAU,EApCK,oBAAmB;EAKlC,gBAAgB,EAAE,IAAI;EACtB,gBAAgB,EAAE,WAAW;EAI7B,KAAK,ECNA,OAAO;EDOZ,YAAY,ECPP,OAAO;EDiCZ,4DACW;IACT,OAAO,EAAE,GAAG;EAxBd,mFAEQ;IACN,KAAK,EAhBD,IAAM;IAiBV,gBAAgB,ECfb,OAAO;IDgBV,YAAY,EChBT,OAAO",
+"sources": ["../../src/orders/order-details.style.scss","../../src/scss/_buttons.scss","../../src/scss/_colors.scss"],
+"names": [],
+"file": "order-details.style.css"
+}

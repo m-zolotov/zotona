@@ -10,9 +10,9 @@ angular.module('API')
             self.allUsers = [];
             self.setUser = function () {
                 var currentUser = self.user;
-                apiService.setLogin(currentUser).then(function(value) {
-                    localStorage.setItem('username', String(value.username));
-                    localStorage.setItem('password', String(value.password));
+                apiService.setAuthorizedUser(currentUser).then(function(value) {
+                    sessionStorage.setItem('username', String(value.username));
+                    sessionStorage.setItem('password', String(value.password));
                 });
             };
         }]

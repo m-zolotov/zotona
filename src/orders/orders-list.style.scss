@@ -1,25 +1,34 @@
 @import "../scss/_colors";
+@import "../scss/_typography";
+@import "../scss/_buttons";
 
-.orders-list-table {
-  width: 100%;
-  max-width: 800px;
-  margin: 3rem auto 1rem;
-  border-collapse: collapse;
-  background-color: transparent;
-  thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid $gray-lighter;
-    text-align: left;
-  }
-  td,
-  th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid $gray-lighter;
-  }
-  &--hover {
-    tbody tr:hover {
-      background-color: rgba(0,0,0,.075);
+.orders-list {
+  &-table {
+    width: 100%;
+    margin: 3rem auto 1rem;
+    border-collapse: collapse;
+    background-color: transparent;
+    thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid $gray-lighter;
+      text-align: left;
     }
+    td,
+    th {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid $gray-lighter;
+    }
+    &--hover {
+      tbody tr:hover {
+        background-color: rgba(0,0,0,.075);
+      }
+    }
+  }
+  &__btn-block {
+    text-align: center;
+  }
+  &__btn {
+    @include btn-outline-secondary();
   }
 }

@@ -1,0 +1,25 @@
+.orders-details__btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  background-image: none;
+  background-color: transparent;
+  color: #0275d8;
+  border-color: #0275d8; }
+  .orders-details__btn.disabled, .orders-details__btn:disabled {
+    opacity: .65; }
+  .orders-details__btn:focus, .orders-details__btn:active, .orders-details__btn:hover {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8; }
+
+/*# sourceMappingURL=order-details.style.css.map */
