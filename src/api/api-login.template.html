@@ -1,14 +1,15 @@
-<form id="login-form" class="form-authorization"><!--action="/" method="get"-->
+<form id="loginForm" name="loginForm" class="form-authorization" ng-submit="$ctrl.loginFormSubmit()">
     <div class="form-authorization__element">
         <label for="username" class="form-authorization__label">Email address</label>
         <input type="text" class="form-authorization__input" id="username" value="{{$ctrl.user.username}}" ng-model="$ctrl.user.username" aria-describedby="emailHelp" placeholder="Введите свой логин или email" required aria-required="true">
-        <small id="emailHelp" class="form-authorization__hint form-authorization__hint--text-muted">Email или логин</small>
     </div>
     <div class="form-authorization__element">
         <label for="password" class="form-authorization__label">Password</label>
         <input type="password" class="form-authorization__input" id="password" value="{{$ctrl.user.password}}" ng-model="$ctrl.user.password" placeholder="Введите свой пароль" required aria-required="true">
     </div>
-    <button type="submit" class="form-authorization__btn" ng-click="$ctrl.setUser($ctrl.user)">Submit</button><!--form="login-form"-->
-    <p ng-bind="$ctrl.user.username"></p>
-    <p ng-bind="$ctrl.user.password"></p>
+    <div class="form-authorization__element form-authorization__element--hint" hidden>
+        <small>Вы ввели не верный логин или пароль.</small>
+    </div>
+    <button type="submit" class="form-authorization__btn-sign-in" ng-click="$ctrl.setUser($ctrl.user)">Войти в аккаунт</button>
+    <button type="submit" class="form-authorization__btn-reset" ng-click="$ctrl.resetForm()">Сбросить поля формы</button>
 </form>

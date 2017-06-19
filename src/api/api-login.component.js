@@ -15,5 +15,12 @@ angular.module('API')
                     sessionStorage.setItem('password', String(value.password));
                 });
             };
+            self.loginFormSubmit = function () {
+                console.log('hi');
+            };
+            self.resetForm = function () {
+                self.user.username = null;
+                self.user.password = null;
+            };
         }]
     });

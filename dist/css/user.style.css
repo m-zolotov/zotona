@@ -52,6 +52,8 @@ body {
   margin: 3rem auto 1rem; }
   .form-authorization__element {
     margin-bottom: 1rem; }
+    .form-authorization__element--hint {
+      color: #636c72; }
   .form-authorization__label {
     display: inline-block;
     margin-bottom: .5rem; }
@@ -70,9 +72,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: .25rem;
     transition: border-color ease-in-out .15s; }
-  .form-authorization__hint--text-muted {
-    color: #636c72; }
-  .form-authorization__btn {
+  .form-authorization__btn-sign-in {
     display: inline-block;
     font-weight: 400;
     line-height: 1.25;
@@ -89,11 +89,34 @@ body {
     background-color: transparent;
     color: #0275d8;
     border-color: #0275d8; }
-    .form-authorization__btn.disabled, .form-authorization__btn:disabled {
+    .form-authorization__btn-sign-in.disabled, .form-authorization__btn-sign-in:disabled {
       opacity: .65; }
-    .form-authorization__btn:focus, .form-authorization__btn:active, .form-authorization__btn:hover {
+    .form-authorization__btn-sign-in:focus, .form-authorization__btn-sign-in:active, .form-authorization__btn-sign-in:hover {
       color: #fff;
       background-color: #0275d8;
       border-color: #0275d8; }
+  .form-authorization__btn-reset {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    background-image: none;
+    background-color: transparent;
+    color: #636c72;
+    border-color: #636c72; }
+    .form-authorization__btn-reset.disabled, .form-authorization__btn-reset:disabled {
+      opacity: .65; }
+    .form-authorization__btn-reset:focus, .form-authorization__btn-reset:active, .form-authorization__btn-reset:hover {
+      color: #fff;
+      background-color: #636c72;
+      border-color: #636c72; }
 
 /*# sourceMappingURL=user.style.css.map */

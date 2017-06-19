@@ -40,6 +40,7 @@ angular.module('API')
                         if (user.username === dataUser[i].username && user.password === dataUser[i].password) {
                             $location.path('/orders/list');
                             deferred.resolve(JSON.parse(JSON.stringify(user)));
+                            break;
                         }
                     }
                 },function error(user) {

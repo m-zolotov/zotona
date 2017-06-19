@@ -12,6 +12,9 @@
   margin: 3rem auto 1rem;
   &__element {
     margin-bottom: 1rem;
+    &--hint {
+      @include text-muted();
+    }
   }
   &__label {
     display: inline-block;
@@ -33,12 +36,10 @@
     border-radius: .25rem;
     transition: border-color ease-in-out .15s;
   }
-  &__hint {
-    &--text-muted {
-      color: $gray-light;
-    }
-  }
-  &__btn {
+  &__btn-sign-in {
     @include btn-outline-primary();
+  }
+  &__btn-reset {
+    @include btn-outline-secondary();
   }
 }
