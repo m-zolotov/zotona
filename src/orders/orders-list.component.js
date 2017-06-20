@@ -6,6 +6,9 @@ angular.module('Order')
         controller: ['orderService', 'apiService', function(orderService, apiService) {
             var self = this;
 
+            self.title = 'Список заказов';
+            self.ordersListFilter = '';
+
             apiService.getCurrentUser();
 
             apiService.getUser().then(function(value) {

@@ -125,4 +125,77 @@ body {
       background-color: #636c72;
       border-color: #636c72; }
 
+.orders-details-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.05rem solid #eceeef; }
+  .orders-details-header .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px; }
+  .orders-details-header__title-block {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    width: calc(83.33333% - 10px); }
+    @media screen and (max-width: 1200px) {
+      .orders-details-header__title-block {
+        width: calc(83.33333% - 10px); } }
+    @media screen and (max-width: 992px) {
+      .orders-details-header__title-block {
+        width: calc(75% - 10px); } }
+    @media screen and (max-width: 768px) {
+      .orders-details-header__title-block {
+        width: calc(66.66667% - 10px); } }
+    @media screen and (max-width: 576px) {
+      .orders-details-header__title-block {
+        width: calc(100% - 10px); } }
+  .orders-details-header__btn-block {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    width: calc(16.66667% - 10px);
+    display: flex; }
+    @media screen and (max-width: 1200px) {
+      .orders-details-header__btn-block {
+        width: calc(16.66667% - 10px); } }
+    @media screen and (max-width: 992px) {
+      .orders-details-header__btn-block {
+        width: calc(25% - 10px); } }
+    @media screen and (max-width: 768px) {
+      .orders-details-header__btn-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 576px) {
+      .orders-details-header__btn-block {
+        width: calc(100% - 10px); } }
+  .orders-details-header__btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    background-image: none;
+    background-color: transparent;
+    color: #636c72;
+    border-color: #636c72;
+    align-items: flex-end;
+    margin: auto 0 0.2rem auto;
+    text-decoration: none; }
+    .orders-details-header__btn.disabled, .orders-details-header__btn:disabled {
+      opacity: .65; }
+    .orders-details-header__btn:focus, .orders-details-header__btn:active, .orders-details-header__btn:hover {
+      color: #fff;
+      background-color: #636c72;
+      border-color: #636c72; }
+
 /*# sourceMappingURL=user.style.css.map */

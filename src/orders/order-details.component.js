@@ -5,6 +5,7 @@ angular.module('Order')
         templateUrl: 'src/orders/order-details.template.html',
         controller: ['orderService', 'apiService', '$routeParams', function(orderService, apiService, $routeParams) {
             var self = this;
+            self.title = 'Детали заказа';
             var orderID = $routeParams.orderID;
 
             apiService.getCurrentUser();

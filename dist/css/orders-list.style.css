@@ -25,15 +25,124 @@ body {
 .h4, h4 {
   font-size: 1.5rem; }
 
+.orders-list-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.05rem solid #eceeef; }
+  .orders-list-header .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px; }
+  .orders-list-header__title-block {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    width: calc(50% - 10px); }
+    @media screen and (max-width: 1200px) {
+      .orders-list-header__title-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 992px) {
+      .orders-list-header__title-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 768px) {
+      .orders-list-header__title-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 576px) {
+      .orders-list-header__title-block {
+        width: calc(100% - 10px); } }
+  .orders-list-header__form-block {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    width: calc(25% - 10px);
+    display: flex; }
+    @media screen and (max-width: 1200px) {
+      .orders-list-header__form-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 992px) {
+      .orders-list-header__form-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 768px) {
+      .orders-list-header__form-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 576px) {
+      .orders-list-header__form-block {
+        width: calc(100% - 10px); } }
+  .orders-list-header__btn-block {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    width: calc(25% - 10px);
+    display: flex; }
+    @media screen and (max-width: 1200px) {
+      .orders-list-header__btn-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 992px) {
+      .orders-list-header__btn-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 768px) {
+      .orders-list-header__btn-block {
+        width: calc(33.33333% - 10px); } }
+    @media screen and (max-width: 576px) {
+      .orders-list-header__btn-block {
+        width: calc(100% - 10px); } }
+  .orders-list-header__btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    background-image: none;
+    background-color: transparent;
+    color: #636c72;
+    border-color: #636c72;
+    align-items: flex-end;
+    margin: auto 0 0.2rem auto; }
+    .orders-list-header__btn.disabled, .orders-list-header__btn:disabled {
+      opacity: .65; }
+    .orders-list-header__btn:focus, .orders-list-header__btn:active, .orders-list-header__btn:hover {
+      color: #fff;
+      background-color: #636c72;
+      border-color: #636c72; }
+  .orders-list-header-form {
+    align-items: flex-end;
+    margin: auto 0 0.2rem auto; }
+    .orders-list-header-form__input {
+      display: block;
+      padding: .5rem .75rem;
+      color: #464a4c;
+      font-size: 1rem;
+      line-height: 1.25;
+      background-color: #fff;
+      background-image: none;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: .25rem;
+      transition: border-color ease-in-out .15s; }
 .orders-list-table {
   width: 100%;
-  margin: 3rem auto 1rem;
+  margin-bottom: 1rem;
   border-collapse: collapse;
   background-color: transparent; }
   .orders-list-table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #eceeef;
-    text-align: left; }
+    text-align: left;
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8; }
   .orders-list-table td,
   .orders-list-table th {
     padding: .75rem;
@@ -42,7 +151,8 @@ body {
   .orders-list-table--hover tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.075); }
 .orders-list__btn-block {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1rem; }
 .orders-list__btn {
   display: inline-block;
   font-weight: 400;

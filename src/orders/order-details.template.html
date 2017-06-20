@@ -1,9 +1,18 @@
+<div class="orders-details-header">
+    <div class="row">
+        <div class="col orders-details-header__title-block">
+            <h2 ng-bind="$ctrl.title"></h2>
+        </div>
+        <div class="col orders-details-header__btn-block">
+            <a class="btn orders-details-header__btn" href="/?#!/orders/list" role="button">Назад к списку заказов</a>
+        </div>
+    </div>
+</div>
+
 <p>Orders details template</p>
 
-<p><strong>Number:</strong> <span ng-bind="$ctrl.order.guid"></span></p>
-<p><strong>Status:</strong> <span ng-bind="$ctrl.order.status"></span></p>
-<p><strong>Date:</strong> <span ng-bind="$ctrl.order.date"></span></p>
-<p><strong>Address:</strong> <span ng-bind="$ctrl.order.address"></span></p>
-<p><strong>Total:</strong> <span ng-bind="$ctrl.order.price"></span></p>
-
-<a class="btn orders-details__btn" href="/?#!/orders/list" role="button">Назад к списку заказов</a>
+<p><strong>Номер заказа:</strong> <span ng-bind="$ctrl.order.guid"></span></p>
+<p><strong>Статус:</strong> <span ng-bind="$ctrl.order.status"></span></p>
+<p><strong>Дата доставки:</strong> <span ng-bind="$ctrl.order.date"></span></p>
+<p><strong>Адрес доставки:</strong> <span ng-bind="$ctrl.order.address"></span></p>
+<p><strong>Цена:</strong> <span ng-bind="$ctrl.order.price"></span></p>
