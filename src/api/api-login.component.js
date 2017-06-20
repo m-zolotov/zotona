@@ -8,15 +8,20 @@ angular.module('API')
 
             self.user = null;
             self.allUsers = [];
+            self.hint = false;
+            self.loginNotCorrect = function () {
+                self.hint = true;
+            };
             self.setUser = function () {
                 var currentUser = self.user;
                 apiService.setAuthorizedUser(currentUser).then(function(value) {
-                    sessionStorage.setItem('username', String(value.username));
-                    sessionStorage.setItem('password', String(value.password));
+                    if (value) {
+                        sessionStorage.setItem('username', String(value.username));
+                        sessionStorage.setItem('password', String(value.password));
+                    } else {
+                        self.loginNotCorrect();
+                    }
                 });
-            };
-            self.loginFormSubmit = function () {
-                console.log('hi');
             };
             self.resetForm = function () {
                 self.user.username = null;

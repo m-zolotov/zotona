@@ -7,13 +7,23 @@
   @include container();
 }
 
+@mixin hint-danger() {
+  display: flex;
+  color: $white;
+  background-color: $red;
+  border: none;
+  border-radius: .25rem;
+  padding: .5rem .85rem;
+  font-size: 1rem;
+}
+
 .form-authorization {
   max-width: 500px;
   margin: 3rem auto 1rem;
   &__element {
     margin-bottom: 1rem;
     &--hint {
-      @include text-muted();
+      @include hint-danger();
     }
   }
   &__label {

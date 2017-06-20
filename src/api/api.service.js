@@ -36,12 +36,17 @@ angular.module('API')
                 var deferred = $q.defer();
                 this.getUser().
                 then(function success(dataUser) {
+                    var value = false;
                     for (var i = 0; i < dataUser.length; i++) {
                         if (user.username === dataUser[i].username && user.password === dataUser[i].password) {
+                            value = true;
                             $location.path('/orders/list');
                             deferred.resolve(JSON.parse(JSON.stringify(user)));
                             break;
                         }
+                    }
+                    if (!value) {
+                        deferred.resolve(value);
                     }
                 },function error(user) {
                     deferred.reject(user.status);
