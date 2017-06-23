@@ -8,7 +8,7 @@ angular.module('Order')
                 var deferred = $q.defer();
                 if (!ordersList) {
                     $http({
-                        method: 'GET', url: './src/data/orders.json'
+                        method: 'GET', url: './src/api/orders.json'
                     }).
                     then (function success(response) {
                         ordersList = response.data;

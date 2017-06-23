@@ -1,0 +1,12 @@
+[
+  {
+    "error": false,
+    "message": "Вы вышли из аккаунта",
+    "data": "ok"
+  },
+  {
+    "error": true,
+    "message": "Вы не вышли из аккаунта",
+    "data": null
+  }
+]

@@ -1,7 +1,7 @@
-@import "../scss/_grid";
-@import "../scss/_colors";
-@import "../scss/_typography";
-@import "../scss/_buttons";
+@import "grid";
+@import "colors";
+@import "typography";
+@import "buttons";
 
 .container {
   @include container();
