@@ -1,5 +1,5 @@
 {
-  "error": true,
-  "message": "Пароль неверный",
-  "data": null
+  "error": false,
+  "message": "Пароль верный",
+  "data": "ok"
 }

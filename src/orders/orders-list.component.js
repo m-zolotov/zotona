@@ -3,13 +3,13 @@
 angular.module('Order')
     .component('ordersList', {
         templateUrl: 'src/orders/orders-list.template.html',
-        controller: ['orderService', 'authService', function(orderService, authService) {
+        controller: ['orderService', 'authService', 'userService', function(orderService, authService, userService) {
             var self = this;
 
             self.title = 'Список заказов';
             self.ordersListFilter = '';
 
-            authService.getCurrentUser();
+            userService.getCurrentUser();
 
             /*authService.getUser().then(function(value) {
                 self.user = value;
