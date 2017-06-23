@@ -1,7 +1,13 @@
-{
-  "error": false,
-  "data": {
-    "username": "admin",
-    "password": "0000"
+[
+  {
+    "error": false,
+    "data": {
+      "username": "admin",
+      "password": "0000"
+    }
+  },
+  {
+    "error": true,
+    "data": null
   }
-}
+]
