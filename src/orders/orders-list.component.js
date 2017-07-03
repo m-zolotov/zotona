@@ -20,7 +20,18 @@ angular.module('Order')
             });
 
             self.logoutUser = function () {
-                authService.logout();
+                authService.logout().then(function(value) {
+                    if (value.error) {
+                        console.log(value.message, 'data:', value.data);
+                    } else {
+                        console.log(value.message, 'data:', value.data);
+                        userService.getCurrentUser().then(function(value) {
+                            if (value) {
+                                self.user = value;
+                            }
+                        });
+                    }
+                });
             };
         }]
     });
