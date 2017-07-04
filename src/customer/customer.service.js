@@ -1,23 +1,22 @@
 'use strict';
 
-angular.module('User')
-    .factory('userService', function($http, $q, $location){
-        var user = null;
+angular.module('Customer')
+    .factory('customerService', function($http, $q, $location){
 
         return {
-            getCurrentUser: function(){
+            getCustomer: function(){
                 var deferred = $q.defer();
 
                 $http({
-                    method: 'GET', url: './src/api/user.json'
+                    method: 'GET', url: './src/api/customer.json'
                 }).
                 then (function success(response) {
                     if (response.data.error) {
-                        $location.path('/');
+
                     } else {
-                        $location.path('/order/list');
+
                     }
-                    deferred.resolve(response.data.data);
+                    deferred.resolve(response.data);
                 },function error(response) {
                     deferred.reject(response.status);
                 });

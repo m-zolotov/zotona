@@ -9,10 +9,7 @@
     </div>
 </div>
 
-<p>Orders details template</p>
+<p>Детали заказа №<span ng-bind="$ctrl.order.id"></span></p>
 
-<p><strong>Номер заказа:</strong> <span ng-bind="$ctrl.order.guid"></span></p>
-<p><strong>Статус:</strong> <span ng-bind="$ctrl.order.status"></span></p>
-<p><strong>Дата доставки:</strong> <span ng-bind="$ctrl.order.date"></span></p>
-<p><strong>Адрес доставки:</strong> <span ng-bind="$ctrl.order.address"></span></p>
+<p><strong>ID клиента:</strong> <span ng-bind="$ctrl.order.customerId"></span></p>
 <p><strong>Цена:</strong> <span ng-bind="$ctrl.order.price"></span></p>

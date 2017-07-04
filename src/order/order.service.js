@@ -38,6 +38,9 @@ angular.module('Order')
                 });
 
                 return deferred.promise;
+            },
+            createOrder: function(){
+                console.log('!');
             }
         }
     });

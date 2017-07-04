@@ -1,202 +1,277 @@
 [
   {
     "id": "0",
-    "guid": "9320fa0e",
-    "status": true,
-    "date": "2016-09-08",
-    "address": "408 Virginia Place, Leola, Michigan, 7064",
-    "price": "$3,809.34"
+    "customerId": "23",
+    "price": "3809.34",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "1",
-    "guid": "97cb772c",
-    "status": true,
-    "date": "2016-08-06",
-    "address": "711 Kosciusko Street, Grapeview, Kansas, 8200",
-    "price": "$1,692.79"
+    "customerId": "23",
+    "price": "1692.79",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "2",
-    "guid": "32039e95",
-    "status": true,
-    "date": "2016-07-03",
-    "address": "390 Calyer Street, Darlington, Minnesota, 4273",
-    "price": "$2,768.76"
+    "customerId": "23",
+    "price": "2768.76",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "3",
-    "guid": "f648cc27",
-    "status": true,
-    "date": "2016-02-23",
-    "address": "614 Rost Place, Bancroft, Iowa, 7635",
-    "price": "$3,392.64"
+    "customerId": "23",
+    "price": "3392.64",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "4",
-    "guid": "972e5cfc",
-    "status": true,
-    "date": "2016-09-15",
-    "address": "543 Leonard Street, Sanborn, Florida, 3204",
-    "price": "$3,949.29"
+    "customerId": "23",
+    "price": "3949.29",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "5",
-    "guid": "4150ca55",
-    "status": false,
-    "date": "2014-08-13",
-    "address": "488 Montauk Court, Skyland, Kentucky, 7028",
-    "price": "$2,587.22"
+    "customerId": "23",
+    "price": "2587.22",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "6",
-    "guid": "518997a6",
-    "status": true,
-    "date": "2015-04-16",
-    "address": "702 Baltic Street, Brooktrails, Mississippi, 5089",
-    "price": "$1,898.95"
+    "customerId": "23",
+    "price": "1898.95",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "7",
-    "guid": "883a1ec1",
-    "status": true,
-    "date": "2016-05-13",
-    "address": "418 Mill Avenue, Cliff, Nevada, 6530",
-    "price": "$1,829.63"
+    "customerId": "23",
+    "price": "1829.63",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "8",
-    "guid": "d316bf5b",
-    "status": true,
-    "date": "2015-02-27",
-    "address": "840 Haring Street, Machias, Guam, 1765",
-    "price": "$1,975.00"
+    "customerId": "23",
+    "price": "1975.00",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "9",
-    "guid": "5cd57632",
-    "status": true,
-    "date": "2015-07-06",
-    "address": "199 Dunham Place, Albrightsville, South Dakota, 2698",
-    "price": "$1,499.11"
+    "customerId": "23",
+    "price": "1499.11",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "10",
-    "guid": "c305b392",
-    "status": true,
-    "date": "2014-04-26",
-    "address": "921 Stuyvesant Avenue, Orason, Virgin Islands, 4142",
-    "price": "$1,804.06"
+    "customerId": "23",
+    "price": "1804.06",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "11",
-    "guid": "51790a41",
-    "status": false,
-    "date": "2014-06-20",
-    "address": "475 Oceanview Avenue, Elwood, Palau, 8206",
-    "price": "$2,178.80"
+    "customerId": "23",
+    "price": "2178.80",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "12",
-    "guid": "8b61eaed",
-    "status": false,
-    "date": "2015-06-19",
-    "address": "981 Newel Street, Saticoy, Virginia, 4826",
-    "price": "$2,874.15"
+    "customerId": "23",
+    "price": "2874.15",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "13",
-    "guid": "a0ece1ae",
-    "status": false,
-    "date": "2017-03-05",
-    "address": "622 Summit Street, Crenshaw, New Hampshire, 4053",
-    "price": "$2,700.24"
+    "customerId": "23",
+    "price": "2700.24",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "14",
-    "guid": "1f685907",
-    "status": false,
-    "date": "2016-07-02",
-    "address": "607 Delevan Street, Martell, Oregon, 2059",
-    "price": "$3,459.07"
+    "customerId": "23",
+    "price": "3459.07",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "15",
-    "guid": "cc2a874b",
-    "status": true,
-    "date": "2017-02-17",
-    "address": "331 Roosevelt Place, Cascades, Arizona, 9580",
-    "price": "$2,376.99"
+    "customerId": "23",
+    "price": "2376.99",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "16",
-    "guid": "3c501df7",
-    "status": false,
-    "date": "2015-08-13",
-    "address": "887 Tompkins Place, Gulf, North Carolina, 7286",
-    "price": "$1,615.58"
+    "customerId": "23",
+    "price": "1615.58",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "17",
-    "guid": "1efee088",
-    "status": false,
-    "date": "2016-03-30",
-    "address": "528 Brooklyn Avenue, Freetown, Illinois, 5755",
-    "price": "$3,957.83"
+    "customerId": "23",
+    "price": "3957.83",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "18",
-    "guid": "84ce600f",
-    "status": false,
-    "date": "2017-05-20",
-    "address": "442 Moore Street, Brady, Connecticut, 6999",
-    "price": "$3,336.89"
+    "customerId": "23",
+    "price": "3336.89",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "19",
-    "guid": "af43d66d",
-    "status": false,
-    "date": "2016-03-18",
-    "address": "805 Exeter Street, Waterford, Idaho, 4106",
-    "price": "$3,553.47"
+    "customerId": "23",
+    "price": "3553.47",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "20",
-    "guid": "77b66017",
-    "status": true,
-    "date": "2015-05-17",
-    "address": "655 Union Street, Osage, Utah, 4804",
-    "price": "$2,280.20"
+    "customerId": "23",
+    "price": "2280.20",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "21",
-    "guid": "a53d0518",
-    "status": true,
-    "date": "2015-03-24",
-    "address": "628 Burnett Street, Mammoth, Oklahoma, 2381",
-    "price": "$1,600.75"
+    "customerId": "23",
+    "price": "1600.75",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "22",
-    "guid": "d9533472",
-    "status": false,
-    "date": "2015-06-24",
-    "address": "976 Macon Street, Curtice, Maryland, 9854",
-    "price": "$3,895.41"
+    "customerId": "23",
+    "price": "3895.41",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "23",
-    "guid": "254817dc",
-    "status": true,
-    "date": "2015-02-08",
-    "address": "650 Montauk Avenue, Maybell, Montana, 6337",
-    "price": "$2,689.70"
+    "customerId": "23",
+    "price": "2689.70",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   },
   {
     "id": "24",
-    "guid": "90617757",
-    "status": false,
-    "date": "2015-04-12",
-    "address": "344 Maujer Street, Nanafalia, Massachusetts, 2582",
-    "price": "$2,904.21"
+    "customerId": "23",
+    "price": "2904.21",
+    "items": [
+      {
+        "title": "",
+        "price": "3809.34"
+      }
+    ]
   }
 ]

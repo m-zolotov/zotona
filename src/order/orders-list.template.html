@@ -9,7 +9,10 @@
             </form>
         </div>
         <div class="col orders-list-header__btn-block">
-            <button type="submit" class="btn orders-list-header__btn" ng-click="$ctrl.logoutUser()">Выйти из аккаунта</button>
+            <button type="submit" class="btn orders-list-header__btn" ng-click="$ctrl.createOrder()">Добавить заказ</button>
+            <button type="submit" class="btn orders-list-header__btn orders-list-header__signout-btn" ng-click="$ctrl.logoutUser()">
+                <img src="dist/img/signout.png" alt="Выйти из аккаунта">
+            </button>
         </div>
     </div>
 </div>
@@ -17,21 +20,19 @@
 <table class="orders-list-table orders-list-table--hover">
     <thead>
         <tr>
-            <th class="">Номер заказа</th>
-            <th class="">Статус</th>
-            <th class="">Дата доставки</th>
-            <th class="">Адрес доставки</th>
+            <th class="">ID заказа</th>
+            <th class="">ID заказчика</th>
             <th class="">Цена</th>
+            <th class="">Товары в заказе</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="order in $ctrl.orders | filter:$ctrl.ordersListFilter">
             <td>
-                <a href="#!/orders/{{order.id}}" ng-bind="order.guid"></a>
+                <a href="#!/orders/{{order.id}}" ng-bind="order.id"></a>
             </td>
-            <td class="" ng-bind="order.status"></td>
-            <td class="" ng-bind="order.date"></td>
-            <td class="" ng-bind="order.address"></td>
+            <td class="" ng-bind="order.customerId"></td>
+            <td class="" ng-bind="order.price"></td>
             <td class="" ng-bind="order.price"></td>
         </tr>
     </tbody>

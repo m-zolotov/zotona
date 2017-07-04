@@ -2,7 +2,7 @@
 
 angular.module('Order')
     .component('orderDetails', {
-        templateUrl: 'src/orders/order-details.template.html',
+        templateUrl: 'src/order/order-details.template.html',
         controller: ['orderService', 'authService', 'userService', '$routeParams', function(orderService, authService, userService, $routeParams) {
             var self = this;
             self.title = 'Детали заказа';

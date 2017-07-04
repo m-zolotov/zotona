@@ -38,9 +38,17 @@
       display: flex;
     }
     &__btn {
-      @include btn-outline-secondary();
+      @include btn-outline-primary();
       align-items: flex-end;
       margin: auto 0 0.2rem auto;
+    }
+    &__signout-btn {
+      @include btn-outline-secondary();
+      display: flex;
+      img {
+        max-width: 100%;
+        height: 20px;
+      }
     }
     &-form {
       align-items: flex-end;
