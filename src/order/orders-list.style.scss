@@ -1,7 +1,7 @@
-@import "../scss/_grid";
-@import "../scss/_colors";
-@import "../scss/_typography";
-@import "../scss/_buttons";
+//@import "../scss/_grid";
+@import "../scss/colors";
+@import "../scss/typography";
+@import "../scss/buttons";
 
 .orders-list {
   &-header {
@@ -9,32 +9,16 @@
     margin-bottom: 1rem;
     border-bottom: .05rem solid $gray-lighter;
     .row {
-      @include row-flex();
     }
     &__title-block {
-      @include col();
-      @include col-6();
-      @include col-lg-4();
-      @include col-md-4();
-      @include col-sm-4();
-      @include col-xs-12();
+
     }
     &__form-block {
-      @include col();
-      @include col-3();
-      @include col-lg-4();
-      @include col-md-4();
-      @include col-sm-4();
-      @include col-xs-12();
+
       display: flex;
     }
     &__btn-block {
-      @include col();
-      @include col-3();
-      @include col-lg-4();
-      @include col-md-4();
-      @include col-sm-4();
-      @include col-xs-12();
+
       display: flex;
     }
     &__btn {

@@ -10,25 +10,41 @@
 
     <form>
         <div class="form-group">
-            <label for="exampleSelect1">Выбор заказчика</label>
-            <select class="form-control" id="exampleSelect1">
-                <option ng-repeat="customer in $ctrl.customers" ng-bind="customer.name"></option>
-            </select>
-        </div>
-        <div class="row">
-            <div class="col" ng-repeat="item in $ctrl.items">
-                <div class="card">
-                    <div class="card-block">
-                        <h4 class="card-title" ng-bind="item.title"></h4>
-                        <p class="card-text" ng-bind="item.price"></p>
-                        <a href="#" class="btn btn-primary">Add line</a>
-                    </div>
+            <div class="row">
+                <div class="col col--customer-label">
+                    <label for="customerSelect">Выбор заказчика</label>
+                </div>
+                <div class="col col--customer-select">
+                    <select class="form-control" id="customerSelect">
+                        <option ng-repeat="customer in $ctrl.customers" ng-bind="customer.name"></option>
+                    </select>
                 </div>
             </div>
         </div>
+        <ul class="list-group">
+            <li class="list-group-item list-order-items" ng-repeat="item in $ctrl.items">
+                <div class="row">
+                    <div class="col col--order-items">
+                        <span ng-bind="item.title"></span>
+                    </div>
+                    <div class="col col--order-items">
+                        <span ng-bind="item.price"></span>
+                    </div>
+                    <div class="col col--order-items">
+                        <button type="submit" class="btn btn-primary btn-sm">Add line</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
         <div class="form-group">
-            <label for="exampleTextarea">Комментарий к заказу</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            <div class="row">
+                <div class="col col--customer-comment-label">
+                    <label for="exampleTextarea">Комментарий к заказу</label>
+                </div>
+                <div class="col col--customer-comment-textarea">
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </div>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary">Сохранить заказ</button>
     </form>

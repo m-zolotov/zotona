@@ -1,13 +1,8 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 @import "grid";
 @import "colors";
 @import "typography";
 @import "buttons";
-
-.container {
-  @include container();
-}
+@import "forms";
 
 @mixin hint-danger() {
   display: flex;
@@ -60,24 +55,11 @@
   padding-bottom: 1.25rem;
   margin-bottom: 1rem;
   border-bottom: .05rem solid $gray-lighter;
-  .row {
-    @include row-flex();
-  }
   &__title-block {
-    @include col();
-    @include col-10();
-    @include col-lg-10();
-    @include col-md-9();
-    @include col-sm-8();
-    @include col-xs-12();
+
   }
   &__btn-block {
-    @include col();
-    @include col-2();
-    @include col-lg-2();
-    @include col-md-3();
-    @include col-sm-4();
-    @include col-xs-12();
+
     display: flex;
   }
   &__btn {
@@ -86,4 +68,8 @@
     margin: auto 0 0.2rem auto;
     text-decoration: none;
   }
+}
+
+.row {
+  @include make-row();
 }
