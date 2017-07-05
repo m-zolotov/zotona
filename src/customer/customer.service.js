@@ -2,24 +2,23 @@
 
 angular.module('Customer')
     .factory('customerService', function($http, $q, $location){
-
+        var customersList = undefined;
         return {
-            getCustomer: function(){
+            getCustomers: function(){
                 var deferred = $q.defer();
-
-                $http({
-                    method: 'GET', url: './src/api/customer.json'
-                }).
-                then (function success(response) {
-                    if (response.data.error) {
-
-                    } else {
-
-                    }
-                    deferred.resolve(response.data);
-                },function error(response) {
-                    deferred.reject(response.status);
-                });
+                if (customersList === undefined) {
+                    $http({
+                        method: 'GET', url: './src/api/customer.json'
+                    }).
+                    then (function success(response) {
+                        customersList = response.data;
+                        deferred.resolve(JSON.parse(JSON.stringify(customersList)));
+                    },function error(response) {
+                        deferred.reject(response.status);
+                    });
+                } else {
+                    deferred.resolve(customersList);
+                }
 
                 return deferred.promise;
             }

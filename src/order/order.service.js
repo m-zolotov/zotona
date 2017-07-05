@@ -39,6 +39,9 @@ angular.module('Order')
 
                 return deferred.promise;
             },
+            saveUser: function(user){
+
+            },
             createOrder: function(){
                 console.log('!');
             }

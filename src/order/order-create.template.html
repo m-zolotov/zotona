@@ -1,0 +1,35 @@
+<div class="orders-details-header">
+    <div class="row">
+        <div class="col orders-details-header__title-block">
+            <h2 ng-bind="$ctrl.title"></h2>
+        </div>
+        <div class="col orders-details-header__btn-block">
+            <a class="btn orders-details-header__btn" href="/?#!/orders/list" role="button">К списку заказов</a>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="exampleSelect1">Выбор заказчика</label>
+            <select class="form-control" id="exampleSelect1">
+                <option ng-repeat="customer in $ctrl.customers" ng-bind="customer.name"></option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col" ng-repeat="item in $ctrl.items">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title" ng-bind="item.title"></h4>
+                        <p class="card-text" ng-bind="item.price"></p>
+                        <a href="#" class="btn btn-primary">Add line</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleTextarea">Комментарий к заказу</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить заказ</button>
+    </form>
+</div>
