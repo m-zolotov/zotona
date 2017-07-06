@@ -9,7 +9,48 @@
     </div>
 </div>
 
-<p>Детали заказа №<span ng-bind="$ctrl.order.id"></span></p>
+<div ng-if="$ctrl.oldOrder">
+    <p>Детали заказа №<span ng-bind="$ctrl.order.id"></span></p>
 
-<p><strong>ID клиента:</strong> <span ng-bind="$ctrl.order.customerId"></span></p>
-<p><strong>Цена:</strong> <span ng-bind="$ctrl.order.price"></span></p>
+    <p><strong>ID клиента:</strong> <span ng-bind="$ctrl.order.customerId"></span></p>
+    <p><strong>Цена:</strong> <span ng-bind="$ctrl.order.price"></span></p>
+</div>
+
+<div ng-if="$ctrl.newOrder">
+    <form  name="orderNew" id="orderNew">
+        <div class="form-group">
+            <div class="row">
+                <div class="col col--customer-label">
+                    <label for="customerSelect">Выбор заказчика</label>
+                </div>
+                <div class="col col--customer-select">
+                    <select class="form-control" name="customerSelect" id="customerSelect" ng-model="$ctrl.selectedOption">
+                        <option ng-repeat="customer in $ctrl.customers" value="{{customer.id}}" ng-bind="customer.name"></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" hidden>
+            <p>Список выбранных товаров</p>
+            <ul class="list-group list-group--selected-items">
+                <li class="list-group-item list-order-selected-items" ng-repeat="item in $ctrl.selectedItems" ng-bind="item.title">gtrfdggfdsg</li>
+            </ul>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item list-order-items" ng-repeat="item in $ctrl.items">
+                <div class="row">
+                    <div class="col col--order-items">
+                        <span ng-bind="item.title"></span>
+                    </div>
+                    <div class="col col--order-items">
+                        <span ng-bind="item.price"></span>
+                    </div>
+                    <div class="col col--order-items">
+                        <button type="submit" class="btn btn-primary btn-sm">Add line</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.saveOrder()" form="orderNew">Сохранить заказ</button>
+    </form>
+</div>

@@ -39,11 +39,50 @@ angular.module('Order')
 
                 return deferred.promise;
             },
-            saveUser: function(user){
+            saveOrder: function(order){
+                var deferred = $q.defer();
+                function getMaxOrderId(orders) {
+                    var maxID = 0;
+                    for (var i = 0; i < orders.length; i++) {
+                        if (maxID < Number(orders[i].id)) {
+                            maxID = Number(orders[i].id);
+                        }
+                    }
+                    return ++maxID;
+                }
+                this.getList().
+                then(function success(orders) {
+                    if (order.id === '-1') {
+                        order.id = String(getMaxOrderId(orders));
+                        ordersList.push(order);
+                        deferred.resolve(JSON.parse(JSON.stringify(order)));
+                    } else {
+                        for (var i = 0; i < ordersList.length; i++) {
+                            if (ordersList[i].id === order.id) {
+                                ordersList[i].customerId = order.customerId;
+                                ordersList[i].price = order.price;
 
+                                deferred.resolve(JSON.parse(JSON.stringify(order)));
+                                break;
+                            }
+                        }
+                    }
+                },function error(orders) {
+                    deferred.reject(orders.status);
+                });
+
+                return deferred.promise;
             },
-            createOrder: function(){
-                console.log('!');
+            createOrder: function(orderID){
+                var deferred = $q.defer();
+                this.getList().
+                then(function success(orders) {
+                    deferred.resolve(JSON.parse(JSON.stringify(ordersList)));
+                },function error(orders) {
+                    deferred.reject(orders.status);
+                });
+
+                return deferred.promise;
             }
         }
     });

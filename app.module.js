@@ -11,10 +11,10 @@ angular.module('app')
             .when('/order/list', {
                 template: '<orders-list></orders-list>'
             })
-            .when('/order/create', {
-                template: '<order-create></order-create>'
-            })
             .when('/order/:orderID', {
+                template: '<order-details></order-details>'
+            })
+            .when('/order/:create', {
                 template: '<order-details></order-details>'
             })
             .otherwise({
