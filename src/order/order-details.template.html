@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" hidden>
             <p>Список выбранных товаров</p>
             <ul class="list-group list-group--selected-items">
                 <li class="list-group-item list-order-selected-items" ng-repeat="item in $ctrl.selectedItems">
@@ -46,7 +46,7 @@
             </ul>
         </div>
         <ul class="list-group">
-            <li class="list-group-item list-order-items" ng-repeat="item in $ctrl.items track by $index"><!--item in $ctrl.items-->
+            <li class="list-group-item list-order-items" ng-repeat="item in $ctrl.items track by $index">
                 <div class="row">
                     <div class="col col--order-items">
                         <span ng-bind="item.title"></span>
@@ -55,7 +55,7 @@
                         <span ng-bind="item.price"></span>
                     </div>
                     <div class="col col--order-items">
-                        <button type="submit" class="btn btn-primary btn-sm" ng-click="$ctrl.addSelectedItems(item)">Add line</button>
+                        <button type="submit" class="btn btn-secondary btn-sm" ng-click="$ctrl.selectedItems(item)" ng-class="item.selected ? 'btn-success' : ''">Add line</button>
                     </div>
                 </div>
             </li>

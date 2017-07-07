@@ -10,7 +10,6 @@ angular.module('Order')
             self.newOrder = null;
             self.oldOrder = null;
             self.order = {};
-            self.selectedItems = [];
 
             if (orderID === 'create') {
                 self.title = 'Детали нового заказа';
@@ -24,14 +23,8 @@ angular.module('Order')
 
             orderService.getOrder(orderID).then(function(value) {
                 self.order = value;
-                console.log('self.order', self.order);
             });
 
-            /*var createID = $routeParams.create; customerService
-
-             orderService.getOrder(createID).then(function(value) {
-             self.order = value;
-             });*/
             customerService.getCustomers().then(function(value) {
                 self.customers = value;
                 self.selectedOption = self.customers[0].id;
@@ -42,9 +35,19 @@ angular.module('Order')
             });
 
             self.saveOrder = function () {
+                var selectedItemsList = [];
+                var selectedItemsListSum = 0;
+                for (var i = 0; i < self.items.length; i++) {
+                    if (self.items[i].selected === true) {
+                        selectedItemsList.push(self.items[i]);
+                        selectedItemsListSum += Number(self.items[i].price);
+                    }
+                }
                 if (orderID === 'create') {
                     self.order.id = '-1';
                     self.order.customerId = self.selectedOption;
+                    self.order.price = String(selectedItemsListSum.toFixed(2));
+                    self.order.items = JSON.parse(JSON.stringify(selectedItemsList));
                 }
                 orderService.saveOrder(self.order).then(function(value) {
                     $location.path('/order/' + self.order.id);
@@ -52,11 +55,12 @@ angular.module('Order')
                 });
             };
             
-            self.addSelectedItems = function (item) {
-                /*item.id = i;
-                i++;*/
-                console.log('item', item);
-                self.selectedItems.push(JSON.parse(JSON.stringify(item)));
+            self.selectedItems = function (item) {
+                if (item.selected) {
+                    item.selected = false;
+                } else {
+                    item.selected = true;
+                }
             };
         }]
     });

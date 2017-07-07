@@ -10,7 +10,6 @@
         </div>
         <div class="col orders-list-header__btn-block">
             <a href="#!/order/create" class="btn orders-list-header__btn" role="button">Добавить заказ</a>
-            <!--<button type="submit" class="btn orders-list-header__btn" ng-click="$ctrl.createOrder()"></button>-->
             <button type="submit" class="btn orders-list-header__btn orders-list-header__signout-btn" ng-click="$ctrl.logoutUser()">
                 <img src="dist/img/signout.png" alt="Выйти из аккаунта">
             </button>
@@ -34,7 +33,13 @@
             </td>
             <td class="" ng-bind="order.customerId"></td>
             <td class="" ng-bind="order.price"></td>
-            <td class="" ng-bind="order.price"></td>
+            <td>
+                <ul ng-repeat="item in order.items">
+                    <li>
+                        <small ng-bind="item.title"></small>
+                    </li>
+                </ul>
+            </td>
         </tr>
     </tbody>
 </table>
