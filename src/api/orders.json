@@ -3,275 +3,150 @@
     "id": "0",
     "customerId": "23",
     "price": "3809.34",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "1",
     "customerId": "23",
     "price": "1692.79",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "2",
     "customerId": "23",
     "price": "2768.76",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "3",
     "customerId": "23",
     "price": "3392.64",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "4",
     "customerId": "23",
     "price": "3949.29",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "5",
     "customerId": "23",
     "price": "2587.22",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "6",
     "customerId": "23",
     "price": "1898.95",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "7",
     "customerId": "23",
     "price": "1829.63",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "8",
     "customerId": "23",
     "price": "1975.00",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "9",
     "customerId": "23",
     "price": "1499.11",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "10",
     "customerId": "23",
     "price": "1804.06",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "11",
     "customerId": "23",
     "price": "2178.80",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "12",
     "customerId": "23",
     "price": "2874.15",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "13",
     "customerId": "23",
     "price": "2700.24",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "14",
     "customerId": "23",
     "price": "3459.07",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "15",
     "customerId": "23",
     "price": "2376.99",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "16",
     "customerId": "23",
     "price": "1615.58",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "17",
     "customerId": "23",
     "price": "3957.83",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "18",
     "customerId": "23",
     "price": "3336.89",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "19",
     "customerId": "23",
     "price": "3553.47",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "20",
     "customerId": "23",
     "price": "2280.20",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "21",
     "customerId": "23",
     "price": "1600.75",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "22",
     "customerId": "23",
     "price": "3895.41",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "23",
     "customerId": "23",
     "price": "2689.70",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   },
   {
     "id": "24",
     "customerId": "23",
     "price": "2904.21",
-    "items": [
-      {
-        "title": "",
-        "price": "3809.34"
-      }
-    ]
+    "items": []
   }
 ]

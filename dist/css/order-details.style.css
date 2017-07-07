@@ -1439,7 +1439,8 @@ input[type="button"].btn-block {
     background-color: #0275d8;
     border-color: #0275d8; }
 
-.list-order-items .row {
+.list-order-items .row,
+.list-group--selected-items .row {
   width: 100%; }
 
 .col--customer-label {

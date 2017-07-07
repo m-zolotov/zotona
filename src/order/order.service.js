@@ -62,6 +62,8 @@ angular.module('Order')
                                 ordersList[i].customerId = order.customerId;
                                 ordersList[i].price = order.price;
 
+                                ordersList[i].items = order.items;
+
                                 deferred.resolve(JSON.parse(JSON.stringify(order)));
                                 break;
                             }

@@ -12,7 +12,8 @@
   }
 }
 
-.list-order-items .row {
+.list-order-items .row,
+.list-group--selected-items .row {
   width: 100%;
 }
 .col {

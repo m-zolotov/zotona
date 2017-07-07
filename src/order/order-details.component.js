@@ -5,24 +5,12 @@ angular.module('Order')
         templateUrl: 'src/order/order-details.template.html',
         controller: ['orderService', 'authService', 'userService', 'customerService', 'orderItemService', '$routeParams', '$location', function(orderService, authService, userService, customerService, orderItemService, $routeParams, $location) {
             var self = this;
+            var i = 0;
             var orderID = $routeParams.orderID;
             self.newOrder = null;
             self.oldOrder = null;
             self.order = {};
-            self.selectedItems = [
-                {
-                    "title": "QUADEEBO",
-                    "price": "3809.87"
-                },
-                {
-                    "title": "TWIGGERY",
-                    "price": "34535.45"
-                },
-                {
-                    "title": "FANFARE",
-                    "price": "765.65"
-                }
-            ];
+            self.selectedItems = [];
 
             if (orderID === 'create') {
                 self.title = 'Детали нового заказа';
@@ -65,7 +53,10 @@ angular.module('Order')
             };
             
             self.addSelectedItems = function (item) {
-                console.log('!');
+                /*item.id = i;
+                i++;*/
+                console.log('item', item);
+                self.selectedItems.push(JSON.parse(JSON.stringify(item)));
             };
         }]
     });
