@@ -3,7 +3,7 @@
 angular.module('Order')
     .component('orderDetails', {
         templateUrl: 'src/order/order-details.template.html',
-        controller: ['orderService', 'authService', 'userService', 'customerService', 'orderItemService', '$routeParams', '$location', function(orderService, authService, userService, customerService, orderItemService, $routeParams, $location) {
+        controller: ['orderService', 'authService', 'userService', '$routeParams', '$location', function(orderService, authService, userService, $routeParams, $location) {
             var self = this;
             var i = 0;
             var orderID = $routeParams.orderID;
@@ -25,12 +25,12 @@ angular.module('Order')
                 self.order = value;
             });
 
-            customerService.getCustomers().then(function(value) {
+            orderService.getCustomers().then(function(value) {
                 self.customers = value;
                 self.selectedOption = self.customers[0].id;
             });
 
-            orderItemService.getOrderItems().then(function(value) {
+            orderService.getOrderItems().then(function(value) {
                 self.items = value;
             });
 
@@ -53,6 +53,7 @@ angular.module('Order')
                     $location.path('/order/' + self.order.id);
                     self.order = value;
                 });
+
             };
             
             self.selectedItems = function (item) {
