@@ -444,4 +444,9 @@ input[type="button"].btn-block {
     background-color: #636c72;
     border-color: #636c72; }
 
+.orders-list--list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin: 0; }
+
 /*# sourceMappingURL=orders-list.style.css.map */

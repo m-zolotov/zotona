@@ -50,7 +50,7 @@ angular.module('Order')
                     self.order.items = JSON.parse(JSON.stringify(selectedItemsList));
                 }
                 orderService.saveOrder(self.order).then(function(value) {
-                    $location.path('/order/' + self.order.id);
+                    $location.path('/order/list');
                     self.order = value;
                 });
 

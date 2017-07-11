@@ -34,8 +34,8 @@
             <td class="" ng-bind="order.customerId"></td>
             <td class="" ng-bind="order.price"></td>
             <td>
-                <ul ng-repeat="item in order.items">
-                    <li>
+                <ul class="orders-list--list-unstyled">
+                    <li ng-repeat="item in order.items">
                         <small ng-bind="item.title"></small>
                     </li>
                 </ul>

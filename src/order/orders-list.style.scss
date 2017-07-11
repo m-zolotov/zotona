@@ -2,6 +2,7 @@
 @import "../scss/colors";
 @import "../scss/typography";
 @import "../scss/buttons";
+@import "../../node_modules/bootstrap/scss/mixins/lists";
 
 .orders-list {
   &-header {
@@ -84,4 +85,9 @@
   &__btn {
     @include btn-outline-secondary();
   }
+}
+
+.orders-list--list-unstyled {
+  @include list-unstyled();
+  margin: 0;
 }
