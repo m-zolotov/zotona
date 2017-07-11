@@ -6,9 +6,10 @@ angular.module('Order')
         var orderItemList = undefined;
         var customersList = undefined;
 
-        function Order(id, customerId, items) {
+        function Order(id, customerId, price, items) {
             this.id = id;
             this.customerId = customerId;
+            this.price = price;
             this.items = items;
         }
 
@@ -32,8 +33,11 @@ angular.module('Order')
                         method: 'GET', url: './src/api/orders.json'
                     }).
                     then (function success(response) {
-                        ordersList = response.data;
-                        deferred.resolve(JSON.parse(JSON.stringify(ordersList)));
+                        ordersList = [];
+                        for (var i = 0; i < response.data.length; i++) {
+                            ordersList.push(new Order(response.data[i].id, response.data[i].customerId, response.data[i].price, response.data[i].items));
+                        }
+                        deferred.resolve(ordersList);
                     },function error(response) {
                         deferred.reject(response.status);
                     });
@@ -67,8 +71,11 @@ angular.module('Order')
                         method: 'GET', url: './src/api/items.json'
                     }).
                     then (function success(response) {
-                        orderItemList = response.data;
-                        deferred.resolve(JSON.parse(JSON.stringify(orderItemList)));
+                        orderItemList = [];
+                        for (var i = 0; i < response.data.length; i++) {
+                            orderItemList.push(new OrderItem(response.data[i].id, response.data[i].title, response.data[i].price, response.data[i].count));
+                        }
+                        deferred.resolve(orderItemList);
                     },function error(response) {
                         deferred.reject(response.status);
                     });
@@ -80,13 +87,16 @@ angular.module('Order')
             },
             getCustomers: function(){
                 var deferred = $q.defer();
-                if (customersList === undefined) {
+                if (!customersList) {
                     $http({
                         method: 'GET', url: './src/api/customer.json'
                     }).
                     then (function success(response) {
-                        customersList = response.data;
-                        deferred.resolve(JSON.parse(JSON.stringify(customersList)));
+                        customersList = [];
+                        for (var i = 0; i < response.data.length; i++) {
+                            customersList.push(new Customer(response.data[i].id, response.data[i].name));
+                        }
+                        deferred.resolve(customersList);
                     },function error(response) {
                         deferred.reject(response.status);
                     });
@@ -118,7 +128,7 @@ angular.module('Order')
                     then (function success(response) {
                         self.getList().
                         then(function success(orders) {
-                            deferred.resolve(JSON.parse(JSON.stringify(ordersList)));
+                            deferred.resolve(ordersList);
                         },function error(orders) {
                             deferred.reject(orders.status);
                         });
@@ -129,31 +139,6 @@ angular.module('Order')
                 } else {
                     deferred.resolve(ordersList);
                 }
-
-                return deferred.promise;
-
-                /*this.getList().
-                then(function success(orders) {
-                    if (order.id === '-1') {
-                        order.id = String(getMaxOrderId(orders));
-                        ordersList.push(order);
-                        deferred.resolve(JSON.parse(JSON.stringify(order)));
-                    } else {
-                        for (var i = 0; i < ordersList.length; i++) {
-                            if (ordersList[i].id === order.id) {
-                                ordersList[i].customerId = order.customerId;
-                                ordersList[i].price = order.price;
-
-                                ordersList[i].items = order.items;
-
-                                deferred.resolve(JSON.parse(JSON.stringify(order)));
-                                break;
-                            }
-                        }
-                    }
-                },function error(orders) {
-                    deferred.reject(orders.status);
-                });*/
 
                 return deferred.promise;
             },
