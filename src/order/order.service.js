@@ -5,6 +5,25 @@ angular.module('Order')
         var ordersList = undefined;
         var orderItemList = undefined;
         var customersList = undefined;
+
+        function Order(id, customerId, items) {
+            this.id = id;
+            this.customerId = customerId;
+            this.items = items;
+        }
+
+        function Customer(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        function OrderItem(id, title, price, count) {
+            this.id = id;
+            this.title = title;
+            this.price = price;
+            this.count = count;
+        }
+
         return{
             getList: function(){
                 var deferred = $q.defer();
@@ -79,6 +98,7 @@ angular.module('Order')
             },
             saveOrder: function(order){
                 var deferred = $q.defer();
+                var self = this;
                 function getMaxOrderId(orders) {
                     var maxID = 0;
                     for (var i = 0; i < orders.length; i++) {
@@ -96,7 +116,7 @@ angular.module('Order')
                         data: JSON.stringify(order)
                     }).
                     then (function success(response) {
-                        this.getList().
+                        self.getList().
                         then(function success(orders) {
                             deferred.resolve(JSON.parse(JSON.stringify(ordersList)));
                         },function error(orders) {
