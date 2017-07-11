@@ -109,17 +109,7 @@ angular.module('Order')
             saveOrder: function(order){
                 var deferred = $q.defer();
                 var self = this;
-                function getMaxOrderId(orders) {
-                    var maxID = 0;
-                    for (var i = 0; i < orders.length; i++) {
-                        if (maxID < Number(orders[i].id)) {
-                            maxID = Number(orders[i].id);
-                        }
-                    }
-                    return ++maxID;
-                }
                 if (order.id === '-1') {
-                    order.id = String(getMaxOrderId(ordersList));
                     $http({
                         method: "POST",
                         url : "./src/api/orders.json",
