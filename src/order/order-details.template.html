@@ -45,8 +45,8 @@
                 </li>
             </ul>
         </div>
-        <ul class="list-group">
-            <li class="list-group-item list-order-items" ng-repeat="item in $ctrl.items track by $index">
+        <ul class="list-group list-order-items">
+            <li class="list-group-item list-order-items__element" ng-repeat="item in $ctrl.items track by $index">
                 <div class="row">
                     <div class="col col--order-items">
                         <span ng-bind="item.title"></span>

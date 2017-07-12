@@ -1636,4 +1636,26 @@ select.form-control-lg:not([size]):not([multiple]) {
       background-color: #636c72;
       border-color: #636c72; }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0; }
+  @media (min-width: 576px) {
+    .row {
+      margin-right: 0;
+      margin-left: 0; } }
+  @media (min-width: 768px) {
+    .row {
+      margin-right: 0;
+      margin-left: 0; } }
+  @media (min-width: 992px) {
+    .row {
+      margin-right: 0;
+      margin-left: 0; } }
+  @media (min-width: 1200px) {
+    .row {
+      margin-right: 0;
+      margin-left: 0; } }
+
 /*# sourceMappingURL=user.style.css.map */

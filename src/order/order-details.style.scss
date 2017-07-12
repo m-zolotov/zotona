@@ -12,6 +12,10 @@
   }
 }
 
+.list-order-items {
+  margin-bottom: 1.5rem;
+}
+
 .list-order-items .row,
 .list-group--selected-items .row {
   width: 100%;
@@ -105,6 +109,9 @@
     }
     @include break(xs){
       @include make-col(12);
+    }
+    &:last-child {
+      text-align: right;
     }
   }
 }

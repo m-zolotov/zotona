@@ -1439,6 +1439,9 @@ input[type="button"].btn-block {
     background-color: #0275d8;
     border-color: #0275d8; }
 
+.list-order-items {
+  margin-bottom: 1.5rem; }
+
 .list-order-items .row,
 .list-group--selected-items .row {
   width: 100%; }
@@ -1653,5 +1656,7 @@ input[type="button"].btn-block {
     .col--order-items {
       flex: 0 0 100%;
       max-width: 100%; } }
+  .col--order-items:last-child {
+    text-align: right; }
 
 /*# sourceMappingURL=order-details.style.css.map */
